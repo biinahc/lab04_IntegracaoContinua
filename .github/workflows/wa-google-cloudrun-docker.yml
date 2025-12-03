@@ -37,7 +37,7 @@ jobs:
           dockerfile: ./Dockerfile   # Specify the path to your Dockerfile here
           tags: sabrinacaldas/webacademy:latest
   deploy:
-    needs: lint
+    needs: build_docker
     name: Setup Gcloud Account
     runs-on: ubuntu-latest
     environment: wagcp_deploy
